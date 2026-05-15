@@ -1518,56 +1518,20 @@
   </div>
 
   <div class="contact-form-card reveal">
-    <div id="formContent">
-      <div class="form-card-title">Book a Free Call</div>
-      <div class="form-card-sub">Takes less than 60 seconds to fill out</div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Full Name *</label>
-          <input type="text" id="f-name" placeholder="John Smith">
-        </div>
-        <div class="form-group">
-          <label>Business Name *</label>
-          <input type="text" id="f-biz" placeholder="Acme Inc.">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Email Address *</label>
-        <input type="email" id="f-email" placeholder="john@acmeinc.com">
-      </div>
-
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" id="f-phone" placeholder="+1 (555) 000-0000">
-      </div>
-
-      <div class="form-group">
-        <label>Service You're Interested In *</label>
-        <div class="select-wrap">
-          <select id="f-service">
-            <option value="" disabled selected>Select a service…</option>
-            <option>Bookkeeping</option>
-            <option>Accounting & Reporting</option>
-            <option>CFO Advisory</option>
-            <option>Payroll Processing</option>
-            <option>Tax Preparation Support</option>
-            <option>QuickBooks Setup & Cleanup</option>
-            <option>Not sure yet — need guidance</option>
-          </select>
-        </div>
-      </div>
-
-      <button class="form-submit" onclick="handleFormSubmit()">Book My Free Call →</button>
-      <p class="form-note">🔒 Your details are never shared or sold.</p>
-    </div>
-
-    <div class="form-success" id="formSuccess">
-      <div class="form-success-icon">✓</div>
-      <div class="form-success-title">You're all set!</div>
-      <p class="form-success-sub">We've received your details and will reach out within 1 business day to schedule your free call.</p>
-    </div>
+    <div class="form-card-title">Book a Free Call</div>
+    <div class="form-card-sub">Takes less than 60 seconds to fill out</div>
+    <iframe
+      data-tally-src="https://tally.so/embed/NpM2Nl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="400"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="Book a Free Call"
+      style="border:none;min-height:400px;"
+    ></iframe>
+    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
   </div>
 </section>
 
@@ -1654,7 +1618,7 @@
     // ── TALLY INTEGRATION ──
     // Replace YOUR_TALLY_FORM_ID below with your actual Tally form ID
     // Get it from: tally.so → your form → Share → the ID in the URL
-    const TALLY_FORM_ID = 'YOUR_TALLY_FORM_ID';
+    const TALLY_FORM_ID = 'NpM2Nl';
 
     const phone   = document.getElementById('f-phone').value.trim();
     const params  = new URLSearchParams({
@@ -1665,9 +1629,8 @@
       'Service':        service,
     });
 
-    // Open Tally form in new tab with prefilled values (optional)
-    // Or just submit silently — remove the window.open line to keep it quiet
-    // window.open(`https://tally.so/r/${TALLY_FORM_ID}?${params}`, '_blank');
+    // Submit to Tally
+    window.open(`https://tally.so/r/${TALLY_FORM_ID}?${params}`, '_blank');
 
     // Show success state
     document.getElementById('formContent').style.display = 'none';
