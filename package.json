@@ -1,0 +1,17 @@
+{
+  "name": "smartbooks-global",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node build.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0",
+    "nodemailer": "^10.0.12",
+    "stripe": "^20.0.0"
+  }
+}
