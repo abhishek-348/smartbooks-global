@@ -2,12 +2,12 @@
 
 Not live. Local implementation only. Existing index.html is unchanged.
 
-Confirmed: github.com/abhishek-348/smartbooks-global → Vercel project smartbooks-global in abhishek-348s-projects → www.smartbooksglobal.com. Vercel Pro verified 29 September 2026. GitHub CLI authenticated as abhishek-348 with owner authorization. Vercel connector returned no teams, so dashboard was used. No existing environment variables.
+Confirmed: github.com/abhishek-348/smartbooks-global → Vercel project smartbooks-global in abhishek-348s-projects → www.smartbooksglobal.com. Vercel Pro verified 29 September 2026. GitHub CLI authenticated as abhishek-348 with owner authorization. Vercel connector returned no teams, so dashboard was used. Private Blob store and FOUNDER_BLOB_PATH now configured for the correct project. Stripe and SMTP credentials are still pending.
 
 ## Before publication
 1. Commercial hosting resolved: Pro verified.
 2. Add Stripe sandbox key securely in Vercel preview environment. Use an existing account; do not expose keys. Creating credentials requires owner action.
-3. Create private Blob store and connect project; upload customer v2 ZIP from outside this public repo. Set FOUNDER_BLOB_PATH. Never commit workbook, examples or ZIP to public GitHub.
+3. Private Blob store created and linked. Customer v2 uploaded as products/founder-clarity-v2.zip. Unauthenticated retrieval returned 403; authorized file SHA-256 matches local ZIP. Never commit paid product files to public GitHub.
 4. Preview checkout uses the VERCEL_URL deployment origin and refuses live keys. Use test Stripe keys in Preview, live only in Production.
 5. Verify paid, declined, cancelled, refunded and repeat-download paths with Stripe test mode and private storage; test the downloaded ZIP in a normal desktop browser.
 6. Publish final seller/privacy/refund terms. Remove prelaunch copy only when complete. Decide tax configuration with the US seller; tax collection not enabled in this draft.
@@ -22,3 +22,7 @@ Delivery currently happens on return from checkout, with repeat download from a 
 Initial USD39 is fixed. No automatic first-ten order cap or USD59 transition is implemented; owner must track orders before opening sales or implement a durable order counter. No live payment has been attempted. Unit checks do not replace Stripe test-mode end-to-end verification.
 
 Run npm install, npm test and npm run build. Public output contains only existing homepage and product/sample/success pages. api/ hosts server functions; lib/ and private deliverables are not copied into public output.
+
+## Verified 29 September 2026
+
+14 local checks pass; both Vercel preview builds succeed. Public pre-launch page may be published with checkout disabled while credentials and provider tests remain pending. Keep LAUNCH_ENABLED unset. Existing homepage and legacy HTML route are preserved.
