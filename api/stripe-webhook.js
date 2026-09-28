@@ -20,7 +20,7 @@ export default async function handler(req,res){
  if(event.livemode!==live)return res.status(400).json({error:'Wrong payment environment'});
  try{
   const session=await stripe.checkout.sessions.retrieve(event.data.object.id,{expand:['payment_intent.latest_charge']});
-  const smtp=nodemailer.createTransport({host:'smtp.hostinger.com',port:465,secure:true,auth:{user:'support@smartbooksglobal.com',pass:process.env.SMTP_PASSWORD},connectionTimeout:10000,socketTimeout:15000});
+  const smtp=nodemailer.createTransport({host:'smtp.hostinger.com',port:465,secure:true,auth:{user:process.env.SMTP_USER||'support@smartbooksglobal.com',pass:process.env.SMTP_PASSWORD},connectionTimeout:10000,socketTimeout:15000});
   await fulfill(session,{live,
    alreadySent:async id=>Boolean(await get(`orders/${id}.json`,{access:'private',token:process.env.BLOB_READ_WRITE_TOKEN,useCache:false})),
    send:async message=>{const result=await smtp.sendMail(message);if(!result.accepted?.length)throw Error('Email not accepted');},
