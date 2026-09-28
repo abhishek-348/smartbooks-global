@@ -22,9 +22,9 @@ export default async function handler(req,res){
   const session=await stripe.checkout.sessions.retrieve(event.data.object.id,{expand:['payment_intent.latest_charge']});
   const smtp=nodemailer.createTransport({host:'smtp.hostinger.com',port:465,secure:true,auth:{user:'support@smartbooksglobal.com',pass:process.env.SMTP_PASSWORD},connectionTimeout:10000,socketTimeout:15000});
   await fulfill(session,{live,
-   alreadySent:async id=>Boolean(await get(`orders/${id}.json`,{access:'private',useCache:false})),
+   alreadySent:async id=>Boolean(await get(`orders/${id}.json`,{access:'private',token:process.env.BLOB_READ_WRITE_TOKEN,useCache:false})),
    send:async message=>{const result=await smtp.sendMail(message);if(!result.accepted?.length)throw Error('Email not accepted');},
-   recordSent:async id=>{await put(`orders/${id}.json`,JSON.stringify({sentAt:new Date().toISOString()}),{access:'private',allowOverwrite:true,contentType:'application/json'});}
+   recordSent:async id=>{await put(`orders/${id}.json`,JSON.stringify({sentAt:new Date().toISOString()}),{access:'private',token:process.env.BLOB_READ_WRITE_TOKEN,allowOverwrite:true,contentType:'application/json'});}
   });
   return res.status(200).json({received:true});
  }catch{return res.status(500).json({error:'Delivery incomplete; retry required'});}

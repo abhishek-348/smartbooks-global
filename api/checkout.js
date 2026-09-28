@@ -9,7 +9,7 @@ export default async function handler(req,res){
  if(!configured(process.env))return res.status(503).json({error:'Sales are not open yet.'});
  try{
   // Confirm delivery storage is reachable before creating a payment session.
-  await head(process.env.FOUNDER_BLOB_PATH);
+  await head(process.env.FOUNDER_BLOB_PATH,{token:process.env.BLOB_READ_WRITE_TOKEN});
   if(process.env.VERCEL_ENV==='preview' && /^(sk|rk)_live_/.test(process.env.STRIPE_SECRET_KEY))throw Error('Live payments disabled in previews');
   const stripe=new Stripe(process.env.STRIPE_SECRET_KEY,{maxNetworkRetries:1,timeout:15000});
   const session=await stripe.checkout.sessions.create(checkoutOptions());
