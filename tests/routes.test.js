@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import checkout from '../api/checkout.js';import download from '../api/download.js';
+const response=()=>({headers:{},code:200,setHeader(k,v){this.headers[k]=v;},status(v){this.code=v;return this;},json(v){this.body=v;return this;}});
+test('Unconfigured checkout cannot take a payment and responses are private',async()=>{delete process.env.LAUNCH_ENABLED;const res=response();await checkout({method:'POST',headers:{origin:'https://www.smartbooksglobal.com'}},res);assert.equal(res.code,503);assert.equal(res.headers['Cache-Control'],'private, no-store');});
+test('Cross-origin checkout requests are rejected',async()=>{const res=response();await checkout({method:'POST',headers:{origin:'https://attacker.example'}},res);assert.equal(res.code,403);});
+test('Download does not accept GET or malformed purchase identifiers',async()=>{let res=response();await download({method:'GET',headers:{}},res);assert.equal(res.code,405);res=response();await download({method:'POST',headers:{origin:'https://www.smartbooksglobal.com'},body:{session_id:'anything'}},res);assert.equal(res.code,400);});
+test('Missing payment setup never releases the private file',async()=>{delete process.env.STRIPE_SECRET_KEY;const res=response();await download({method:'POST',headers:{origin:'https://www.smartbooksglobal.com'},body:{session_id:'cs_test_1234567890ABCDEF'}},res);assert.equal(res.code,503);assert.equal(res.headers['Cache-Control'],'private, no-store');});
