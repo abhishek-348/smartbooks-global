@@ -1,0 +1,134 @@
+[
+  {
+    "id": "bookkeeping",
+    "name": "Monthly bookkeeping",
+    "tag": "A dependable foundation",
+    "headline": "Good decisions start<br>with reliable books.",
+    "desc": "Organized transactions, reconciled accounts, and a consistent view of your business. Monthly bookkeeping that helps you stay on top of the numbers.",
+    "audience": "US business owners who want their books handled consistently, with less time spent chasing or organizing records.",
+    "scope": [
+      "Transaction categorization and ledger maintenance",
+      "Bank and credit card reconciliations",
+      "Monthly profit and loss and balance sheet",
+      "Open questions and exceptions highlighted for review"
+    ],
+    "needs": [
+      "Your legal entity and business model",
+      "Current accounting software and period to be covered",
+      "Bank and credit card accounts to reconcile",
+      "Prior financial statements and opening balances"
+    ],
+    "deliver": "A reconciled reporting period, financial statements, and a clear list of outstanding questions or next steps.",
+    "price": "Starter, from $299/month"
+  },
+  {
+    "id": "accounting-reporting",
+    "name": "Accounting & reporting",
+    "tag": "See what is changing",
+    "headline": "More than a report.<br>A view you can use.",
+    "desc": "Management reporting that connects your financial records to what is happening in the business: revenue, costs, margins, and cash.",
+    "audience": "Owners who need more visibility than transaction processing alone can provide.",
+    "scope": [
+      "Monthly financial statements and reporting schedules",
+      "Cash flow reporting and working capital visibility",
+      "Receivables and payables reporting",
+      "Reporting structure suited to your business model"
+    ],
+    "needs": [
+      "Recent financial statements and trial balance",
+      "Chart of accounts and current reports",
+      "Revenue streams and major cost categories",
+      "Your reporting priorities and internal stakeholders"
+    ],
+    "deliver": "A reporting pack with the agreed financial statements, supporting schedules, and key items for discussion.",
+    "price": "Growth, from $599/month"
+  },
+  {
+    "id": "cfo-advisory",
+    "name": "Fractional CFO advisory",
+    "tag": "Look beyond the close",
+    "headline": "A financial perspective<br>on your next move.",
+    "desc": "Cash planning, budgeting, and financial analysis for business owners making decisions about growth, hiring, and investment.",
+    "audience": "Founders and growing businesses that want regular financial oversight without adding a full-time finance leadership role.",
+    "scope": [
+      "Cash flow forecasting and scenario planning",
+      "Budgets and variance analysis",
+      "Business KPI selection and reporting",
+      "Financial decision support and planning discussions"
+    ],
+    "needs": [
+      "Current financial statements and cash position",
+      "Business model and growth priorities",
+      "Debt, fixed commitments, and planned investments",
+      "Existing budget, forecasts, and performance measures"
+    ],
+    "deliver": "An agreed planning model, reporting cadence, and decision-focused financial discussion.",
+    "price": "CFO Advisory, from $999/month"
+  },
+  {
+    "id": "quickbooks-cleanup",
+    "name": "QuickBooks setup & cleanup",
+    "tag": "Get back to a clear starting point",
+    "headline": "Messy books?<br>Start with a plan.",
+    "desc": "A structured review of your QuickBooks file, followed by a scoped cleanup, catch-up, or setup engagement.",
+    "audience": "Businesses moving to QuickBooks Online, catching up on prior periods, or dealing with unreconciled balances and unclear records.",
+    "scope": [
+      "QuickBooks Online setup and chart of accounts review",
+      "Catch-up bookkeeping for agreed periods",
+      "Bank reconciliation and balance review",
+      "Migration and opening balance support"
+    ],
+    "needs": [
+      "Software, access role, and file history",
+      "Periods requiring setup or cleanup",
+      "Bank statements and available source documents",
+      "Prior returns or financial statements for reference"
+    ],
+    "deliver": "The agreed periods reviewed and organized, with reconciliations and a handover of remaining items.",
+    "price": "Quoted after a file review"
+  },
+  {
+    "id": "payroll-support",
+    "name": "Payroll coordination",
+    "tag": "Keep the moving parts connected",
+    "headline": "Payroll, connected<br>to your books.",
+    "desc": "Support organizing payroll inputs, coordinating with your payroll provider, and reconciling payroll activity in your accounting records.",
+    "audience": "US businesses that want payroll and accounting to work together with clear responsibilities.",
+    "scope": [
+      "Payroll input and provider coordination",
+      "Payroll journal posting and reconciliation",
+      "Payroll expense and liability review",
+      "Year-end information coordination with your provider"
+    ],
+    "needs": [
+      "Payroll provider and pay schedule",
+      "Employer and entity details",
+      "Payroll reports and relevant ledger balances",
+      "Agreed responsibilities for approvals and filings"
+    ],
+    "deliver": "Agreed payroll coordination and accounting support. Processing, filings, and provider responsibilities are confirmed in scope.",
+    "price": "Scoped with your service plan"
+  },
+  {
+    "id": "tax-ready-books",
+    "name": "Tax-ready books & CPA support",
+    "tag": "A smoother year-end handoff",
+    "headline": "Give your tax professional<br>a clearer starting point.",
+    "desc": "Organized financial records and year-end schedules that help your CPA or tax preparer review the business and complete their work.",
+    "audience": "Owners who want fewer last-minute document requests and better coordination between bookkeeping and their tax professional.",
+    "scope": [
+      "Year-end financial statement preparation support",
+      "Reconciled balance sheet schedules",
+      "Coordination on bookkeeping questions from your CPA",
+      "Organization of agreed year-end records"
+    ],
+    "needs": [
+      "Relevant financial year and legal entities",
+      "Your CPA or tax preparer contact, with permission",
+      "Current books and prior-year financials",
+      "Outstanding tax-preparer requests"
+    ],
+    "deliver": "An agreed year-end bookkeeping package and coordination on related questions. Tax filing or representation is separately scoped with the appropriate professional.",
+    "price": "Scoped with your bookkeeping engagement"
+  }
+]

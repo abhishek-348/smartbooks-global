@@ -1,0 +1,52 @@
+SMARTBOOKS GLOBAL — US BUSINESS WEBSITE REDESIGN
+Prepared 16 October 2026
+
+REVIEW STATUS
+A preview redesign of the existing SmartBooks Global service website.
+Production website is unchanged until this branch is approved for release.
+
+POSITIONING AND CONTENT
+US business-owner focus; bookkeeping, reporting and advisory described in plain English.
+Distinct deep teal, warm white and mint visual system, responsive layouts and consistent typography.
+Approved founder portrait used on the homepage and About page.
+15 core website pages, including six service pages with scope, audience, expected outputs, starting information and FAQs.
+Starting USD prices retain the current public figures: Starter $299, Growth $599, CFO Advisory $999 per month. The proposal sets final scope and fees. Unlimited transaction promises and unsupported turnaround guarantees are removed.
+No fabricated customer counts, ratings, testimonials, US offices, CPA licences or security certifications.
+Existing published QuickBooks and Intuit credentials are retained; the founder is described as a Chartered Accountant in India, not a US CPA.
+Payroll coordination and tax-ready bookkeeping have clear boundaries and coordination with the appropriate providers or tax professionals.
+
+PAGES AND TOOLS
+Home, Services, six dedicated service pages, Who We Help, Pricing, About, Contact, Resources, Privacy and Service Information.
+Illustrative profit-and-loss/cash-flow reporting panel, with consistent sample data and keyboard-accessible tabs. It is explicitly not a real client report or live dashboard.
+Service-specific preparation checklist, current-book-state selection, checkboxes and text download.
+Cash runway and break-even planning tools. Browser only; no calculator inputs are submitted.
+Service and plan context carried into the enquiry journey; direct email preparation option.
+Existing Tally enquiry form NpM2Nl retained, with native dynamic-height embed support and an external fallback. No real enquiry was submitted during testing.
+SEO titles/descriptions, canonical URLs, Open Graph metadata, Organization schema, favicon, robots file and sitemap.
+No analytics, CRM, appointment scheduler, automatic email or service checkout has been added.
+
+EXISTING PRODUCT AREA
+Founder Clarity pages, checkout/download API, commerce/fulfillment libraries, tests, dependencies, storage, credentials and payment configuration are unchanged.
+The build continues to copy the existing Founder Clarity area to public output.
+Live read-only checkout availability was verified as {"available":false} while preparing this preview.
+No paid product bundle is included in public assets. No payment or launch flag has been enabled.
+
+VALIDATION
+Existing 14 commerce/fulfillment/route checks pass.
+Build succeeds; JavaScript syntax passes; all internal/static links resolve, including preserved product pages.
+All 15 service-website routes checked at 1440px, 768px and 390px widths: HTTP 200, one H1, no horizontal overflow.
+Reporting tabs and keyboard controls, checklist context and download, calculator math and edge inputs, pricing context, enquiry embed, mobile menu and Escape verified.
+No JavaScript errors in tested flows.
+Founder portrait checked loaded at its final crop; desktop/mobile layouts visually inspected.
+Third-party form inbox delivery is not verified because no real enquiry was sent.
+
+MAINTENANCE
+Edit page HTML and shared style.css/app.js. Service information for tools is in services.json.
+Run npm ci, npm test and npm run build. The build writes public/ and preserves the service pages and Founder Clarity pages.
+Vercel remains linked to the existing smartbooks-global project with its existing API functions and settings.
+
+BEFORE PUBLIC RELEASE
+Review the preview, service scope and published starting prices.
+Confirm current credentials and contact-routing preferences.
+Approve any additional testimonials, client logos, claims, images or case studies before adding them.
+A product-sales launch is a separate task with its own live payment/delivery verification.
